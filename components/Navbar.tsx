@@ -39,20 +39,23 @@ export default function Navbar() {
           </button>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex gap-6 text-base font-medium text-gray-800">
-            {links.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className={`px-3 py-2 rounded-md transition ${
-                  isMounted && pathname === href
-                    ? 'bg-blue-500 text-white'
-                    : 'hover:bg-blue-500 hover:text-white'
-                }`}
-              >
-                {label}
-              </Link>
-            ))}
+          <div className="hidden md:flex gap-6 text-base font-medium">
+            {links.map(({ href, label }) => {
+              const isActive = isMounted && pathname === href
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  className={`px-3 py-2 rounded-md transition ${
+                    isActive
+                      ? 'bg-blue-500 text-white'
+                      : 'text-black hover:bg-blue-500 hover:text-white'
+                  }`}
+                >
+                  {label}
+                </Link>
+              )
+            })}
           </div>
         </div>
 
@@ -63,25 +66,26 @@ export default function Navbar() {
           }`}
         >
           <div className="flex flex-col gap-3 bg-white shadow rounded-md p-4">
-            {links.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setIsOpen(false)}
-                className={`block px-4 py-2 rounded-md text-base font-medium transition ${
-                  isMounted && pathname === href
-                    ? 'bg-blue-500 text-white'
-                    : 'text-gray-800 hover:bg-blue-500 hover:text-white'
-                }`}
-              >
-                {label}
-              </Link>
-            ))}
+            {links.map(({ href, label }) => {
+              const isActive = isMounted && pathname === href
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-4 py-2 rounded-md text-base font-medium transition ${
+                    isActive
+                      ? 'bg-blue-500 text-white'
+                      : 'text-black hover:bg-blue-500 hover:text-white'
+                  }`}
+                >
+                  {label}
+                </Link>
+              )
+            })}
           </div>
         </div>
       </nav>
     </header>
   )
 }
-
-//teting here
