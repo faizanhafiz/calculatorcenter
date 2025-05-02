@@ -4,11 +4,11 @@ export default function NotFound() {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center px-5 py-16 bg-gray-100 text-gray-800 overflow-x-hidden">
       {/* Realistic Calculator Background */}
-      <div 
+      <div
         className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1587145820266-a5951ee6f620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2560&q=80')] bg-cover bg-center opacity-20 z-0"
         aria-hidden="true"
       ></div>
-      
+
       {/* Gradient overlay to improve text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-100/20 to-transparent z-0"></div>
 

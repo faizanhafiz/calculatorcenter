@@ -1,27 +1,18 @@
-// app/layout.tsx
 import './globals.css'
-import { ReactNode } from 'react'
-
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+
 export const metadata = {
   title: 'CalculatorHub',
-  description: 'Free Online Calculators for Health, Finance, Math, and More',
+  description: 'All your calculators in one place'
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="flex flex-col min-h-screen bg-gray-50 text-gray-800">
-        {/* Shared Header */}
+      <body className="flex flex-col min-h-screen">
         <Navbar />
-
-        {/* Page Body */}
-        <main className="flex-grow container mx-auto px-4 py-6">
-          {children}
-        </main>
-
-        {/* Shared Footer */}
+        <main className="flex-grow px-4 md:px-8 py-6">{children}</main>
         <Footer />
       </body>
     </html>
