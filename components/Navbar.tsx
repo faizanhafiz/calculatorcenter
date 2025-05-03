@@ -26,7 +26,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="text-2xl font-extrabold text-blue-600">
-            CalculatorHub
+            CalculatorCenter
           </Link>
 
           {/* Mobile Menu Toggle Button */}

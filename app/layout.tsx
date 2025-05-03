@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'CalculatorHub',
+  title: 'CalculatorCenter',
   description: 'All your calculators in one place'
 }
 
