@@ -1,9 +1,11 @@
+import Link from 'next/link';
+
 export default function NotFound() {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center px-5 py-16 bg-gray-100 text-gray-800 overflow-x-hidden">
       {/* Logo */}
       <header className="absolute top-0 left-0 p-5">
-        <a href="/" aria-label="CalculatorCenter Home" className="flex items-center space-x-2">
+        <Link href="/" aria-label="CalculatorCenter Home" className="flex items-center space-x-2">
           <svg
             className="w-8 h-8 text-blue-500"
             fill="none"
@@ -21,7 +23,7 @@ export default function NotFound() {
           <span className="text-2xl font-bold text-blue-500">
             Calculator<span className="text-red-500">.</span>Center
           </span>
-        </a>
+        </Link>
       </header>
 
       {/* Realistic Calculator Background */}
@@ -47,13 +49,13 @@ export default function NotFound() {
           Oops! Looks like this calculation didn’t add up. Let’s get you back to
           crunching numbers!
         </p>
-        <a
+        <Link
           href="/"
           className="inline-flex items-center justify-center px-6 py-3 bg-green-500 text-white text-base font-semibold rounded-full hover:scale-110 hover:shadow-lg transition-transform duration-200"
           role="button"
         >
-         Home
-        </a>
+          Home
+        </Link>
       </main>
 
       {/* Geometric Shapes */}

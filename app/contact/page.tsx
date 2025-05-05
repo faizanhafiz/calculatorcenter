@@ -1,4 +1,8 @@
+"use client"
 export default function Contact() {
+
+
+  
     return (
       <div>
         <h1 className="text-3xl font-semibold mb-4">Contact Us</h1>
