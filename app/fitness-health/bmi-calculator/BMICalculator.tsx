@@ -75,7 +75,8 @@ const BMICalculator = () => {
 
   return (
     <div className="w-full flex justify-center">
-      <div className="w-full max-w-2xl bg-white rounded-xl shadow p-6 space-y-6">
+      <div className="w-full bg-white rounded-xl shadow p-6 space-y-6">
+
         <h2 className="text-2xl font-semibold text-blue-700">BMI Calculator</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -84,7 +85,7 @@ const BMICalculator = () => {
               <label htmlFor="height" className="block mb-2 text-sm font-medium text-gray-700">
                 Height ({isUSUnits ? 'inches' : 'cm'})
               </label>
-              <div className="w-1/2">
+              <div className="w">
                 <input
                   type="number"
                   id="height"
@@ -102,7 +103,7 @@ const BMICalculator = () => {
               <label htmlFor="weight" className="block mb-2 text-sm font-medium text-gray-700">
                 Weight ({isUSUnits ? 'pounds' : 'kg'})
               </label>
-              <div className="w-1/2">
+              <div className="w">
                 <input
                   type="number"
                   id="weight"
