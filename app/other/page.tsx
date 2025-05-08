@@ -157,19 +157,7 @@ export const metadata = {
     )
   }
   
-  // Reusable Category Component
-//   function Category({ title, color, items }: { title: string, color: string, items: [string, string][] }) {
-//     return (
-//       <div className="bg-white rounded-xl shadow p-5">
-//         <h3 className={`text-xl font-semibold text-${color}-600 mb-4`}>{title}</h3>
-//         <ul className={`space-y-2 text-${color}-700`}>
-//           {items.map(([label, href], idx) => (
-//             <li key={idx}><Link href={href} className="hover:underline">{label}</Link></li>
-//           ))}
-//         </ul>
-//       </div>
-//     )
-//   }
+  
   
   function Category({ title, color, items }: { title: string, color: string, items: [string, string][] }) {
     const colorMap: Record<string, string> = {
