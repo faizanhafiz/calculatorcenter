@@ -76,7 +76,6 @@ const BMICalculator = () => {
   return (
     <div className="w-full flex justify-center">
       <div className="w-full bg-white rounded-xl shadow p-6 space-y-6">
-
         <h2 className="text-2xl font-semibold text-blue-700">BMI Calculator</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -85,17 +84,15 @@ const BMICalculator = () => {
               <label htmlFor="height" className="block mb-2 text-sm font-medium text-gray-700">
                 Height ({isUSUnits ? 'inches' : 'cm'})
               </label>
-              <div className="w">
-                <input
-                  type="number"
-                  id="height"
-                  min="0"
-                  value={height}
-                  onChange={(e) => setHeight(e.target.value)}
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-900"
-                  placeholder={isUSUnits ? 'e.g. 70' : 'e.g. 170'}
-                />
-              </div>
+              <input
+                type="number"
+                id="height"
+                min="0"
+                value={height}
+                onChange={(e) => setHeight(e.target.value)}
+                className="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-900"
+                placeholder={isUSUnits ? 'e.g. 70' : 'e.g. 170'}
+              />
               {heightError && <p className="text-red-600 text-sm mt-2">{heightError}</p>}
             </div>
 
@@ -103,17 +100,15 @@ const BMICalculator = () => {
               <label htmlFor="weight" className="block mb-2 text-sm font-medium text-gray-700">
                 Weight ({isUSUnits ? 'pounds' : 'kg'})
               </label>
-              <div className="w">
-                <input
-                  type="number"
-                  id="weight"
-                  min="0"
-                  value={weight}
-                  onChange={(e) => setWeight(e.target.value)}
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-900"
-                  placeholder={isUSUnits ? 'e.g. 150' : 'e.g. 65'}
-                />
-              </div>
+              <input
+                type="number"
+                id="weight"
+                min="0"
+                value={weight}
+                onChange={(e) => setWeight(e.target.value)}
+                className="w-full border border-gray-300 rounded-md px-4 py-2 text-gray-900"
+                placeholder={isUSUnits ? 'e.g. 150' : 'e.g. 65'}
+              />
               {weightError && <p className="text-red-600 text-sm mt-2">{weightError}</p>}
             </div>
 
@@ -122,7 +117,7 @@ const BMICalculator = () => {
                 onClick={calculateBMIAndPI}
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-md"
               >
-                Calculate BMI 
+                Calculate BMI
               </button>
 
               <button
@@ -180,37 +175,23 @@ const BMICalculator = () => {
           <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg text-sm text-gray-800">
             <h3 className="text-lg font-semibold text-blue-700 mb-2">BMI Categories</h3>
             <p className="mb-3">
-              BMI is a simple measure of body fat based on height and weight. Here&rsquo;s how to interpret your BMI result:
+              BMI is a simple measure of body fat based on height and weight. Here&apos;s how to interpret your BMI result:
             </p>
             <ul className="list-disc list-inside space-y-1">
-              <li>
-                <strong>Underweight:</strong> BMI less than 18.5
-              </li>
-              <li>
-                <strong>Normal weight:</strong> BMI 18.5–24.9
-              </li>
-              <li>
-                <strong>Overweight:</strong> BMI 25–29.9
-              </li>
-              <li>
-                <strong>Obese:</strong> BMI 30 or more
-              </li>
+              <li><strong>Underweight:</strong> BMI less than 18.5</li>
+              <li><strong>Normal weight:</strong> BMI 18.5–24.9</li>
+              <li><strong>Overweight:</strong> BMI 25–29.9</li>
+              <li><strong>Obese:</strong> BMI 30 or more</li>
             </ul>
 
             <h3 className="text-lg font-semibold text-blue-700 mb-2 mt-6">Ponderal Index (PI) Categories</h3>
             <p className="mb-3">
-              Ponderal Index is another measure of body fat based on height and weight. Here&rsquo;s how to interpret your PI result:
+              Ponderal Index is another measure of body fat based on height and weight. Here&apos;s how to interpret your PI result:
             </p>
             <ul className="list-disc list-inside space-y-1">
-              <li>
-                <strong>Low PI:</strong> PI less than 2.2
-              </li>
-              <li>
-                <strong>Normal PI:</strong> PI between 2.2 and 2.5
-              </li>
-              <li>
-                <strong>High PI:</strong> PI greater than 2.5
-              </li>
+              <li><strong>Low PI:</strong> PI less than 2.2</li>
+              <li><strong>Normal PI:</strong> PI between 2.2 and 2.5</li>
+              <li><strong>High PI:</strong> PI greater than 2.5</li>
             </ul>
           </div>
         </div>

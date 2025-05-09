@@ -2,9 +2,9 @@ export const metadata = {
     title: 'Fitness & Health Calculators - CalculatorHub',
     description: 'Discover categorized fitness and health calculators including BMI, calorie needs, body fat, and more at CalculatorHub.',
     keywords: [
+      'BMI Calculator',
       'Fitness Calculator',
       'Health Calculator',
-      'BMI Calculator',
       'Calorie Calculator',
       'Body Fat Calculator',
       'Heart Rate Calculator',
@@ -61,7 +61,7 @@ export const metadata = {
             <h3 className="text-xl font-semibold text-green-600 mb-4">Body Measurements</h3>
             <ul className="space-y-2 text-green-700">
               <li><Link href="/fitness-health/bmi-calculator" className="hover:underline">BMI Calculator</Link></li>
-              <li><Link href="/fitness-health/body-fat" className="hover:underline">Body Fat Calculator</Link></li>
+              <li><Link href="/fitness-health/body-fat-calculator" className="hover:underline">Body Fat Calculator</Link></li>
               <li><Link href="/fitness-health/waist-to-hip" className="hover:underline">Waist-to-Hip Ratio Calculator</Link></li>
             </ul>
           </div>
