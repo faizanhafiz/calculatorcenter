@@ -18,17 +18,18 @@ const BodyFatCalculator = () => {
   const toCm = (value: number, unit: string) => (unit === 'imperial' ? value * 2.54 : value);
 
   const validateInputs = () => {
-    const fields: any = { height, weight, waist, neck, age };
-    if (gender === 'female') fields['hip'] = hip;
+  const fields: any = { height, weight, waist, neck, age };
+  if (gender === 'female') fields['hip'] = hip;
 
-    const newErrors: any = {};
-    Object.entries(fields).forEach(([key, value]) => {
-      newErrors[key] = !value || parseFloat(value) <= 0;
-    });
+  const newErrors: any = {};
+  Object.entries(fields).forEach(([key, value]) => {
+    const numValue = parseFloat(String(value));
+    newErrors[key] = !value || isNaN(numValue) || numValue <= 0;
+  });
 
-    setErrors(newErrors);
-    return Object.values(newErrors).every((val) => !val);
-  };
+  setErrors(newErrors);
+  return Object.values(newErrors).every((val) => !val);
+};
 
   const calculateBodyFat = () => {
     if (!validateInputs()) {
