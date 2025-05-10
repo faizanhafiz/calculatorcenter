@@ -13,23 +13,28 @@ const BodyFatCalculator = () => {
   const [age, setAge] = useState('');
   const [bodyFat, setBodyFat] = useState<number | null>(null);
   const [errors, setErrors] = useState<{ [key: string]: boolean }>({});
-  const [showAd, setShowAd] = useState(false); // New state for showing the ad modal
+  const [showAd, setShowAd] = useState(false);
 
   const toCm = (value: number, unit: string) => (unit === 'imperial' ? value * 2.54 : value);
 
+  const getUnitLabel = (field: string) => {
+    if (field === 'weight') return unit === 'imperial' ? 'lbs' : 'kg';
+    return unit === 'imperial' ? 'inches' : 'cm';
+  };
+
   const validateInputs = () => {
-  const fields: any = { height, weight, waist, neck, age };
-  if (gender === 'female') fields['hip'] = hip;
+    const fields: any = { height, weight, waist, neck, age };
+    if (gender === 'female') fields['hip'] = hip;
 
-  const newErrors: any = {};
-  Object.entries(fields).forEach(([key, value]) => {
-    const numValue = parseFloat(String(value));
-    newErrors[key] = !value || isNaN(numValue) || numValue <= 0;
-  });
+    const newErrors: any = {};
+    Object.entries(fields).forEach(([key, value]) => {
+      const numValue = parseFloat(String(value));
+      newErrors[key] = !value || isNaN(numValue) || numValue <= 0;
+    });
 
-  setErrors(newErrors);
-  return Object.values(newErrors).every((val) => !val);
-};
+    setErrors(newErrors);
+    return Object.values(newErrors).every((val) => !val);
+  };
 
   const calculateBodyFat = () => {
     if (!validateInputs()) {
@@ -65,8 +70,6 @@ const BodyFatCalculator = () => {
     }
 
     setBodyFat(parseFloat(result.toFixed(1)));
-
-    // Show the ad after the calculation
     setShowAd(true);
   };
 
@@ -102,46 +105,42 @@ const BodyFatCalculator = () => {
       errors[field] ? 'focus:ring-red-500' : 'focus:ring-blue-500'
     }`;
 
-  const labelStyle = 'block font-medium text-gray-900 mb-1 ';
+  const labelStyle = 'block font-medium text-gray-900 mb-1';
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-full bg-white rounded-xl shadow p-6 space-y-6">
+    <div className="w-full flex justify-center px-2">
+     <div className="w-full bg-white rounded-xl shadow p-6 space-y-6">
         <h1 className="text-3xl font-extrabold text-center text-blue-700 mb-6">Body Fat Calculator</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-6">
-            {/* Gender and Unit Row */}
-            <div className="flex items-center justify-between space-x-6">
-              <div className="flex items-center">
+            {/* Gender and Unit Selection */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
                 <label className={labelStyle}>Gender</label>
-                <div className="flex space-x-4 ml-4">
-                  <div>
+                <div className="flex items-center gap-4">
+                  <label className="flex items-center text-gray-900">
                     <input
                       type="radio"
-                      id="male"
                       name="gender"
                       value="male"
                       checked={gender === 'male'}
                       onChange={() => setGender('male')}
+                      className="mr-2"
                     />
-                    <label htmlFor="male" className="ml-2 text-gray-900">
-                      Male
-                    </label>
-                  </div>
-                  <div>
+                    Male
+                  </label>
+                  <label className="flex items-center text-gray-900">
                     <input
                       type="radio"
-                      id="female"
                       name="gender"
                       value="female"
                       checked={gender === 'female'}
                       onChange={() => setGender('female')}
+                      className="mr-2"
                     />
-                    <label htmlFor="female" className="ml-2 text-gray-900">
-                      Female
-                    </label>
-                  </div>
+                    Female
+                  </label>
                 </div>
               </div>
 
@@ -152,81 +151,46 @@ const BodyFatCalculator = () => {
                   onChange={(e) => setUnit(e.target.value as 'metric' | 'imperial')}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-900"
                 >
-                  <option value="metric">Metric (cm/kg)</option>
-                  <option value="imperial">Imperial (in/lbs)</option>
+                  <option value="metric">Metric Units (cm/kg)</option>
+                  <option value="imperial">Us Units(in/lbs)</option>
                 </select>
               </div>
             </div>
 
-            {/* Inputs in Two Rows */}
+            {/* Input Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className={labelStyle}>Age</label>
-                <input
-                  type="number"
-                  value={age}
-                  onChange={(e) => setAge(e.target.value)}
-                  className={inputStyle('age')}
-                />
-                {errors.age && <p className="text-red-500 text-sm">Required and must be &gt; 0</p>}
-              </div>
-
-              <div>
-                <label className={labelStyle}>Height</label>
-                <input
-                  type="number"
-                  value={height}
-                  onChange={(e) => setHeight(e.target.value)}
-                  className={inputStyle('height')}
-                />
-                {errors.height && <p className="text-red-500 text-sm">Required and must be &gt; 0</p>}
-              </div>
-
-              <div>
-                <label className={labelStyle}>Weight</label>
-                <input
-                  type="number"
-                  value={weight}
-                  onChange={(e) => setWeight(e.target.value)}
-                  className={inputStyle('weight')}
-                />
-                {errors.weight && <p className="text-red-500 text-sm">Required and must be &gt; 0</p>}
-              </div>
-
-              <div>
-                <label className={labelStyle}>Waist</label>
-                <input
-                  type="number"
-                  value={waist}
-                  onChange={(e) => setWaist(e.target.value)}
-                  className={inputStyle('waist')}
-                />
-                {errors.waist && <p className="text-red-500 text-sm">Required and must be &gt; 0</p>}
-              </div>
-
-              <div>
-                <label className={labelStyle}>Neck</label>
-                <input
-                  type="number"
-                  value={neck}
-                  onChange={(e) => setNeck(e.target.value)}
-                  className={inputStyle('neck')}
-                />
-                {errors.neck && <p className="text-red-500 text-sm">Required and must be &gt; 0</p>}
-              </div>
-
-              {gender === 'female' && (
-                <div>
-                  <label className={labelStyle}>Hip</label>
+              {[
+                { label: 'Age', value: age, setter: setAge, field: 'age', placeholder: 'e.g. 25' },
+                { label: `Height (${getUnitLabel('height')})`, value: height, setter: setHeight, field: 'height', placeholder: 'e.g. 175' },
+                { label: `Weight (${getUnitLabel('weight')})`, value: weight, setter: setWeight, field: 'weight', placeholder: 'e.g. 70' },
+                { label: `Waist (${getUnitLabel('waist')})`, value: waist, setter: setWaist, field: 'waist', placeholder: 'e.g. 80' },
+                { label: `Neck (${getUnitLabel('neck')})`, value: neck, setter: setNeck, field: 'neck', placeholder: 'e.g. 40' },
+                ...(gender === 'female'
+                  ? [
+                      {
+                        label: `Hip (${getUnitLabel('hip')})`,
+                        value: hip,
+                        setter: setHip,
+                        field: 'hip',
+                        placeholder: 'e.g. 95',
+                      },
+                    ]
+                  : []),
+              ].map(({ label, value, setter, field, placeholder }) => (
+                <div key={field}>
+                  <label className={labelStyle}>{label}</label>
                   <input
                     type="number"
-                    value={hip}
-                    onChange={(e) => setHip(e.target.value)}
-                    className={inputStyle('hip')}
+                    value={value}
+                    onChange={(e) => setter(e.target.value)}
+                    className={inputStyle(field)}
+                    placeholder={placeholder}
                   />
-                  {errors.hip && <p className="text-red-500 text-sm">Required for females</p>}
+                  {errors[field] && (
+                    <p className="text-red-500 text-sm">Required and must be &gt; 0</p>
+                  )}
                 </div>
-              )}
+              ))}
             </div>
 
             <button
@@ -237,6 +201,7 @@ const BodyFatCalculator = () => {
             </button>
           </div>
 
+          {/* Result Display */}
           <div className="bg-blue-50 p-6 rounded-lg text-sm text-gray-800 border border-blue-200">
             <h2 className="text-xl font-semibold text-blue-700 mb-4">Result</h2>
 
@@ -256,27 +221,33 @@ const BodyFatCalculator = () => {
                 </div>
               </>
             ) : (
-              <p className="text-gray-600">Please enter all values and click "Calculate" to see your result.</p>
+              <p className="text-gray-600 mt-4">
+                Please enter all values and click "Calculate" to see your result.
+              </p>
             )}
-          </div>
-        </div>
-      </div>
 
-      {/* Ad Modal */}
-      {showAd && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white p-6 rounded-lg w-80">
-            <h2 className="text-xl font-semibold text-gray-800">Special Offer</h2>
-            <p className="text-gray-600 my-4">Check out our amazing offers on fitness gear!</p>
-            <button
-              onClick={() => setShowAd(false)}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md"
-            >
-              Close Ad
-            </button>
+<br></br>
+<br></br>
+            <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 shadow-sm max-w-xl mx-auto">
+  <h2 className="text-lg font-semibold text-blue-700 mb-3">Body Fat Summary</h2>
+  <ul className="space-y-2 text-gray-800">
+    <li><span className="font-medium">Body Fat (U.S. Navy Method):</span> 15.3%</li>
+    <li><span className="font-medium">Body Fat Category:</span> Fitness</li>
+    <li><span className="font-medium">Body Fat Mass:</span> 23.2 lbs</li>
+    <li><span className="font-medium">Lean Body Mass:</span> 128.8 lbs</li>
+    <li><span className="font-medium">Ideal Body Fat for Given Age (Jackson & Pollock):</span> 10.5%</li>
+    <li><span className="font-medium">Body Fat to Lose to Reach Ideal:</span> 7.2 lbs</li>
+    <li><span className="font-medium">Body Fat (BMI Method):</span> 15.4%</li>
+  </ul>
+</div>
+
           </div>
+          
         </div>
-      )}
+        
+        
+      </div>
+      
     </div>
   );
 };
