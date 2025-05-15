@@ -39,7 +39,7 @@ const BMICalculator = dynamic(() => import('./BMICalculator'), { ssr: true });
 
 export default function Page() {
   return (
-    <main className="pt-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto space-y-10">
+    <main className="pt-24  md:px-8 lg:px-16 max-w-7xl mx-auto space-y-10">
 
      
 

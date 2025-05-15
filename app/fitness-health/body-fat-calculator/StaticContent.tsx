@@ -13,89 +13,170 @@ const renderLatex = (latex: string) => {
 const StaticContent = () => {
   return (
     <section className="bg-white rounded-xl shadow p-6">
-      <h2 className="text-2xl font-semibold text-blue-700 mb-4">BMI Introduction</h2>
-      <p className="text-lg text-gray-700 mb-4">
-        A BMI calculator is a helpful tool for assessing whether your weight is appropriate for your height. BMI, or Body Mass Index, is a number derived by dividing a person&rsquo;s weight by the square of their height. While it doesn&rsquo;t directly measure body fat or muscle mass, it gives a reliable estimate of body composition and helps categorize individuals into weight classes. <br /><br />
-        Using a BMI calculator, you can quickly find out if you fall into one of the standard BMI categories: underweight, normal weight, overweight, or obese. These classifications are based on widely recognized health guidelines, although slight variations may exist depending on age, region, or specific health recommendations. In some cases, the categories are more detailed, including terms like &quot;severely underweight&quot; or &quot;very severely obese.&quot; <br /><br />
-        Although the BMI calculator doesn&rsquo;t replace a professional health assessment, it&apos;s widely trusted by doctors, fitness experts, and individuals for a quick check. It&rsquo;s a simple yet powerful way to understand whether your current weight might require lifestyle adjustments or further medical attention.
+      <h2 className="text-2xl font-semibold text-blue-700 mb-4">Body Fat Percentage</h2>
+
+      <p className="text-gray-700 mb-4">
+        Your body fat percentage serves as a crucial health marker, providing valuable insight into your overall wellbeing. Elevated body fat levels significantly increase susceptibility to various chronic conditions, including cardiovascular disease, type 2 diabetes, and metabolic disorders.
       </p>
 
-      <h3 className="text-xl font-semibold text-gray-800 mb-2">History of BMI</h3>
-      <p className="text-lg text-gray-700">
-        The BMI or Body Mass Index, was first proposed by a Belgian mathematician and statistician, Adolphe Quetelet in the nineteenth century, wherein he called it the Quetelet Index. The purpose of developing this index was to provide a simple yet systematic method of assessing the average body composition of a given population.
-        <br /><br />
-        In the 1970s, the needle shifted in measuring and quantifying the body composition of individualistic populations. It was during the Seven Countries Study when several researchers noted that BMI could be an effective substitute for body fat (adiposity) and was associated with health issues stemming from excess weight or obesity. This helped in the universal acceptance of BMI as a tool in public health and clinical infrastructure.
-        <br /><br />
-        There is no question about the popularity, however, the BMI calculator comes with its cons. Observing it from a holistic point of view, one might miss that it only takes into consideration height and weight and ignores other important aspects like age, sex, or muscle mass which have significant relevance to body composition. Because of these factors, BMI tends to overestimate fat in athletes and underestimate in people of advanced age or those with lesser muscle mass.
-        <br /><br />
-        To improve reliability, BMI is often associated with other waist-measurement ratios such as waist circumference (WC), when combined offer a deeper dive regarding an individual&apos;s health risks. That being said, one must be careful since measuring waist circumference requires scientific expertise and shouldn&rsquo;t be trusted in the hands of untrained personnel.
-      </p>
-
-      <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">BMI Formula:</h3>
-      <p className="text-lg text-gray-700"><strong>Metric units:</strong></p>
-      <div className="text-black text-center overflow-auto" dangerouslySetInnerHTML={renderLatex(`\\text{BMI} = \\frac{\\text{Weight (kg)}}{\\text{Height (m)}^2}`)} />
-
-      <p className="text-lg text-gray-700 mt-4"><strong>US units:</strong></p>
-      <div className="text-black text-center overflow-auto" dangerouslySetInnerHTML={renderLatex(`\\text{BMI} = \\frac{\\text{Weight (lbs)} \\times 703}{\\text{Height (in)}^2}`)} />
-
-      <h3 className="text-xl font-semibold text-gray-800 mt-6">BMI Categories:</h3>
-      <ul className="list-disc list-inside space-y-2 text-lg text-gray-700 mb-4">
-        <li><strong>Underweight:</strong> BMI less than 18.5</li>
-        <li><strong>Normal weight:</strong> BMI between 18.5 and 24.9</li>
-        <li><strong>Overweight:</strong> BMI between 25 and 29.9</li>
-        <li><strong>Obese:</strong> BMI of 30 or greater</li>
+      <h3 className="text-lg font-semibold text-gray-800 mb-2">Optimal Body Fat Ranges for Health:</h3>
+      <ul className="list-disc pl-6 text-gray-700 mb-4">
+        <li><span className="font-semibold">Men</span> should strive to maintain <span className="font-semibold">15% body fat or less</span></li>
+        <li><span className="font-semibold">Women</span> should target <span className="font-semibold">25% body fat or less</span></li>
       </ul>
 
-      <h3 className="text-xl font-semibold text-gray-800 mt-6">BMI Table for Adults</h3>
-      <p className="text-lg text-gray-700 mb-4">
-        The BMI calculator follows the World Health Organization&rsquo;s (WHO) guidelines for healthy body weight.
-        This is the World Health Organization&apos;s (WHO) recommended body weight based on BMI values for adults. It is used for both men and women, age 20 or older.
+      <p className="text-gray-700">
+        These thresholds represent the upper limits for maintaining optimal metabolic health and physical function. Individuals with athletic training or specific fitness goals may maintain lower percentages, though extremely low body fat can also present health concerns.
       </p>
 
-      <div className="w-full flex justify-center overflow-x-auto mb-6">
-        <table className="table-auto border border-gray-300 text-center">
-          <thead className="bg-blue-100 text-gray-800">
-            <tr>
-              <th className="border border-gray-300 px-4 py-2">Category</th>
-              <th className="border border-gray-300 px-4 py-2">BMI range - kg/m²</th>
-            </tr>
-          </thead>
-          <tbody className="text-gray-700">
-            <tr><td className="border border-gray-300 px-4 py-2">Severe Thinness</td><td className="border border-gray-300 px-4 py-2">&lt; 16</td></tr>
-            <tr><td className="border border-gray-300 px-4 py-2">Moderate Thinness</td><td className="border border-gray-300 px-4 py-2">16 - 17</td></tr>
-            <tr><td className="border border-gray-300 px-4 py-2">Mild Thinness</td><td className="border border-gray-300 px-4 py-2">17 - 18.5</td></tr>
-            <tr><td className="border border-gray-300 px-4 py-2">Normal</td><td className="border border-gray-300 px-4 py-2">18.5 - 25</td></tr>
-            <tr><td className="border border-gray-300 px-4 py-2">Overweight</td><td className="border border-gray-300 px-4 py-2">25 - 30</td></tr>
-            <tr><td className="border border-gray-300 px-4 py-2">Obese Class I</td><td className="border border-gray-300 px-4 py-2">30 - 35</td></tr>
-            <tr><td className="border border-gray-300 px-4 py-2">Obese Class II</td><td className="border border-gray-300 px-4 py-2">35 - 40</td></tr>
-            <tr><td className="border border-gray-300 px-4 py-2">Obese Class III</td><td className="border border-gray-300 px-4 py-2">&gt; 40</td></tr>
-          </tbody>
-        </table>
+      <h3 className="text-lg font-semibold text-gray-800 mb-2 mt-6">Why Does Body Fat Percentage Matter?</h3>
+      <ol className="list-decimal pl-6 text-gray-700 space-y-2">
+        <li>
+          <span className="font-semibold">Better Health Indicator Than BMI</span>
+          <ul className="list-disc pl-6 mt-1">
+            <li>BMI doesn’t distinguish between fat and muscle. A muscular person could be classified as "overweight" despite having low body fat.</li>
+          </ul>
+        </li>
+        <li>
+          <span className="font-semibold">Helps Track Fitness Progress</span>
+          <ul className="list-disc pl-6 mt-1">
+            <li>Losing fat while gaining muscle may not change your weight much, but your body composition improves.</li>
+          </ul>
+        </li>
+        <li>
+          <span className="font-semibold">Reduces Risk of Chronic Diseases</span>
+          <ul className="list-disc pl-6 mt-1">
+            <li>Excess body fat (especially visceral fat around organs) is linked to diabetes, heart disease, and metabolic disorders.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h3 className="text-lg font-semibold text-gray-800 mt-6 mb-2">How to Lower Body Fat Percentage</h3>
+      <ol className="list-decimal pl-6 text-gray-700 space-y-1">
+        <li><span className="font-semibold">Strength Training</span> – Builds muscle, which boosts metabolism.</li>
+        <li><span className="font-semibold">High-Protein Diet</span> – Helps retain muscle while losing fat.</li>
+        <li><span className="font-semibold">Cardio & HIIT</span> – Burns calories and improves fat loss.</li>
+        <li><span className="font-semibold">Sleep & Stress Management</span> – Poor sleep and high cortisol increase fat storage.</li>
+        <li><span className="font-semibold">Avoid Crash Diets</span> – Rapid weight loss often means losing muscle, not just fat.</li>
+      </ol>
+
+      <h3 className="text-lg font-semibold text-gray-800 mt-6 mb-2">Measuring Body Fat Percentage</h3>
+      <p className="text-gray-700 mb-2">
+        <span className="font-semibold">U.S. Navy Method:</span> This method uses circumference measurements and has been adopted by the Naval Health Research Center. Follow these steps:
+      </p>
+
+      <ul className="list-disc pl-6 text-gray-700 mb-4 space-y-1">
+        <li>Measure the circumference of the subject's waist at a horizontal level around the navel for men, and at the smallest width for women.</li>
+        <li>Record the circumference of the neck just below the larynx, with the tape sloping downward to the front.</li>
+        <li>Measure height standing straight without shoes.</li>
+        <li><span className="font-semibold">For women only:</span> Measure the circumference of the hips at the largest horizontal measure.</li>
+      </ul>
+
+      <h4 className="text-md font-semibold text-gray-800 mt-4 mb-1">Body Fat Percentage (BFP) Formula for Males:</h4>
+
+      <div className="mb-2">
+        <p className="text-gray-700 mb-1 font-semibold">USC Units:</p>
+        <div className="overflow-x-auto">
+          <div className="bg-gray-50 text-black text-base p-2 rounded inline-block min-w-fit" dangerouslySetInnerHTML={renderLatex(String.raw`BFP = 86.010 \cdot \log_{10}(\text{abdomen} - \text{neck}) - 70.041 \cdot \log_{10}(\text{height}) + 36.76`)} />
+        </div>
       </div>
 
-      <h3 className="text-xl font-semibold text-gray-800">Why is BMI Important?</h3>
-      <p className="text-lg text-gray-700 mb-6">
-        BMI is a useful tool for identifying potential health risks related to being underweight or overweight. While it does not measure body fat directly,
-        it provides a quick estimate of whether an individual&apos;s weight may be in a healthy range. It is often used as an initial screening tool before more
-        detailed assessments are conducted by healthcare professionals.
-      </p>
+      <div className="mb-4">
+        <p className="text-gray-700 mb-1 font-semibold">SI, Metric Units:</p>
+        <div className="overflow-x-auto">
+          <div className="bg-gray-50 text-black text-base p-2 rounded inline-block min-w-fit" dangerouslySetInnerHTML={renderLatex(String.raw`BFP = \left(\frac{495}{1.0324 - 0.19077 \cdot \log_{10}(\text{waist} - \text{neck}) + 0.15456 \cdot \log_{10}(\text{height})}\right) - 450`)} />
+        </div>
+      </div>
 
-      <h3 className="text-xl font-semibold text-gray-800 mt-6">Why BMI Isn&apos;t the Whole Story</h3>
-      <p className="text-lg text-gray-700 mb-4">
-        BMI (Body Mass Index) is a convenient method to apply weight and height to categorize whether an individual is obese, overweight, normal weight, or underweight. It&apos;s simple to calculate, yet it has significant limitations. Key reasons why BMI can be deceptive and should not be the sole indicator of health are listed below:
-      </p>
+      <h4 className="text-md font-semibold text-gray-800 mt-4 mb-1">Body Fat Percentage (BFP) Formula for Females:</h4>
 
-      <ul className="list-disc list-inside space-y-2 text-lg text-gray-700 mb-6">
-        <li><strong>Muscle vs. Fat:</strong> BMI considers all weight equal. A very muscular individual can have a high BMI even with nearly no extra fat. For instance, many top athletes fall into the &quot;overweight&quot; BMI category despite being lean. Conversely, an inactive or older person may have a &quot;normal&quot; BMI but still carry a high percentage of body fat.</li>
-        <li><strong>Fat Distribution:</strong> BMI does not reflect where fat is located. Abdominal fat (visceral fat) is more strongly linked to health risks like diabetes and heart disease compared to fat stored around the hips or thighs.</li>
-        <li><strong>Age, Sex, and Ethnicity:</strong> BMI uses a single formula and cutoffs for all individuals. However, age, sex, and ethnicity all influence body composition. Older adults may lose muscle and gain fat without much weight change, women naturally carry more fat than men, and ethnic groups (e.g., Asians) may face health risks at lower BMIs.</li>
-      </ul>
+      <div className="mb-2">
+        <p className="text-gray-700 mb-1 font-semibold">USC Units:</p>
+        <div className="overflow-x-auto">
+          <div className="bg-gray-50 text-black text-base p-2 rounded inline-block min-w-fit" dangerouslySetInnerHTML={renderLatex(String.raw`BFP = 163.205 \cdot \log_{10}(\text{waist} + \text{hip} - \text{neck}) - 97.684 \cdot \log_{10}(\text{height}) - 78.387`)} />
+        </div>
+      </div>
 
-      <h2 className="text-3xl font-bold text-center mt-12 mb-6 text-blue-800">FAQs about BMI</h2>
+      <div className="mb-4">
+        <p className="text-gray-700 mb-1 font-semibold">SI, Metric Units:</p>
+        <div className="overflow-x-auto">
+          <div className="bg-gray-50 text-black text-base p-2 rounded inline-block min-w-fit" dangerouslySetInnerHTML={renderLatex(String.raw`BFP = \left(\frac{495}{1.29579 - 0.35004 \cdot \log_{10}(\text{waist} + \text{hip} - \text{neck}) + 0.22100 \cdot \log_{10}(\text{height})}\right) - 450`)} />
+        </div>
+      </div>
 
-      <p className="text-center text-gray-600 mb-8">Discover solutions to commonly asked questions about BMI and its relevance to health.</p>
+      <h4 className="text-md font-semibold text-gray-800 mt-4 mb-1">Fat Mass (FM) & Lean Mass (LM) Formulas:</h4>
 
-      {/* The FAQ section below remains as-is, since all strings are JSX or safely inside elements */}
+      <div className="mb-2">
+        <p className="text-gray-700 mb-1 font-semibold">USC Units:</p>
+        <div className="overflow-x-auto">
+          <div className="bg-gray-50 text-black text-base p-2 rounded inline-block min-w-fit" dangerouslySetInnerHTML={renderLatex(String.raw`FM = \frac{BFP}{100} \times \text{Weight}`)} />
+        </div>
+      </div>
+
+      <div className="mb-2">
+        <p className="text-gray-700 mb-1 font-semibold">SI, Metric Units:</p>
+        <div className="overflow-x-auto">
+          <div className="bg-gray-50 text-black text-base p-2 rounded inline-block min-w-fit" dangerouslySetInnerHTML={renderLatex(String.raw`LM = \text{Weight} - FM`)} />
+        </div>
+      </div>
+
+      <h2 className="text-3xl font-bold text-center mt-12 mb-6 text-blue-800">FAQs about Body Fat Percentage</h2>
+      <p className="text-center text-gray-600 mb-8">Discover solutions to commonly asked questions about Body Fat Percentage and its relevance to health.</p>
+
+      <div className="space-y-4 max-w-4xl mx-auto">
+        {[
+          {
+            question: "What is a healthy body fat percentage?",
+            answer: <>A healthy body fat percentage varies by gender and age. For men, 10-20% is generally fit, while women typically range between 18-28%. Athletes may have lower percentages, but going too low can be unhealthy</>,
+          },
+          {
+            question: "How is body fat percentage different from BMI?",
+            answer: <>The most accurate methods are DEXA scans, hydrostatic weighing, and Bod Pod tests. However, skinfold calipers and bioelectrical impedance scales (like smart scales) are more accessible and can still be useful for tracking trends.</>,
+          },
+          {
+            question: "Can I have too little body fat?",
+            answer: <>Yes! <strong>Essential fat</strong> is necessary for hormone regulation, organ protection, and overall health. For men, dropping below 3-5% and women below 10-13% can lead to health issues like hormonal imbalances, weakened immunity, and organ dysfunction.</>,
+          },
+          {
+            question: " Why does body fat percentage matter more than weight?",
+            answer: <>Weight doesn’t distinguish between fat, muscle, and water. Two people can weigh the same but have very different body compositions—one could be lean and muscular, while the other could have higher fat levels.</>,
+          },
+          {
+            question: "How can I lower my body fat percentage?",
+            answer: (
+              <ul className="list-disc list-inside mt-2 ml-4">
+                <li><strong>Strength training</strong> (to preserve muscle)</li>
+                <li><strong>High-protein diet</strong> (to support fat loss and muscle retention)</li>
+                <li><strong>Cardio & HIIT</strong> (to burn calories)</li>
+                <li><strong>Adequate sleep & stress management</strong> (high cortisol promotes fat storage)</li>
+              </ul>
+            ),
+          },
+          {
+            question: " Does age affect body fat percentage?",
+            answer: "Yes, as we age, muscle mass tends to decrease (sarcopenia), and fat percentage may increase even if weight stays the same. Strength training and proper nutrition can help counteract this.",
+          },
+        ].map((faq, idx) => (
+          <details
+            key={idx}
+            className="bg-gray-50 border border-blue-200 rounded-xl shadow-sm open:shadow-md transition-shadow duration-300"
+          >
+            <summary className="text-lg font-semibold text-blue-900 cursor-pointer px-6 py-4 flex justify-between items-center hover:bg-blue-50 rounded-xl">
+              <span>{faq.question}</span>
+              <svg
+                className="w-4 h-4 transform transition-transform duration-300 text-blue-600 group-open:rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div className="px-6 pb-4 pt-2 text-gray-800 text-base">
+              {faq.answer}
+            </div>
+          </details>
+        ))}
+      </div>
     </section>
   );
 };

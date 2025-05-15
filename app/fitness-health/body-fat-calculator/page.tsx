@@ -40,7 +40,7 @@ const BodyFatCalculator = dynamic(() => import('./BodyFatCalculator'), { ssr: tr
 
 export default function Page() {
   return (
-    <main className="pt-24 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto space-y-10">
+    <main className="pt-24  md:px-8 lg:px-16 max-w-7xl mx-auto space-y-10">
       
       {/* Page Heading */}
       <section className="text-center">
@@ -48,8 +48,8 @@ export default function Page() {
           Body Fat Calculator
         </h1>
         <p className="text-gray-700 text-base md:text-lg text-center md:text-left">
-          Use this Body Fat Calculator to estimate your body fat percentage based on the US Navy method or BMI method. Understand your fitness level and track progress.
-        </p>
+          Looking to understand your body fat percentage? You’re in the right place. This guide explains what body fat is, how it affects your health, and how to calculate it using simple tools like our free Body Fat Calculator.
+         </p>
       </section>
 
       {/* Top Ad */}
