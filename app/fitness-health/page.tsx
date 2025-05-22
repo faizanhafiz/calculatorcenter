@@ -62,7 +62,7 @@ export const metadata = {
             <ul className="space-y-2 text-green-700">
               <li><Link href="/fitness-health/bmi-calculator" className="hover:underline">BMI Calculator</Link></li>
               <li><Link href="/fitness-health/body-fat-calculator" className="hover:underline">Body Fat Calculator</Link></li>
-              <li><Link href="/fitness-health/waist-to-hip" className="hover:underline">Waist-to-Hip Ratio Calculator</Link></li>
+              <li><Link href="/fitness-health/body-type-calculator" className="hover:underline">Waist-to-Hip Ratio Calculator</Link></li>
             </ul>
           </div>
   
