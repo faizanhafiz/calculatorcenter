@@ -3,25 +3,25 @@ import dynamic from 'next/dynamic';
 import StaticContent from './StaticContent';
  
 export const metadata: Metadata = {
-  title: 'BMI Calculator - Calculate Your Body Mass Index | CalculatorCenter',
+  title: 'Calorie Calculator - Calculate Your Daily Calorie Needs | CalculatorCenter',
   description:
-    'Use our free BMI Calculator to determine your Body Mass Index. Understand your health status based on your weight and height.',
+    'Use our free Calorie Calculator to determine your daily calorie needs based on your age, height, weight, gender, and activity level.',
     keywords: [
-      'BMI Calculator',
-      'BMI',
-      'Bmi calculator for women'
+      'Calorie Calculator',
+      'Calories',
+      'Calorie calculator for women'
     ],
   openGraph: {
-    title: 'BMI Calculator - CalculatorCenter',
-    description: 'Easily calculate your BMI and assess your weight category with our accurate tool.',
-    url: 'https://calculatorhub.com/fitness-health/bmi',
+    title: 'Calorie Calculator - CalculatorCenter',
+    description: 'Easily calculate your daily calorie needs based on your age, height, weight, gender, and activity level.',
+    url: 'https://calculatorhub.com/fitness-health/calorie-calculator',
     siteName: 'CalculatorHub',
     images: [
       {
-        url: 'https://calculatorhub.com/og-images/bmi.png',
+        url: 'https://calculatorhub.com/og-images/calorie-calculator.png',
         width: 1200,
         height: 630,
-        alt: 'BMI Calculator on CalculatorHub',
+        alt: 'Calorie Calculator on CalculatorHub',
       },
     ],
     locale: 'en_US',
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BMI Calculator - CalculatorHub',
-    description: 'Determine your Body Mass Index using height and weight. Accurate and fast.',
-    images: ['https://calculatorhub.com/og-images/bmi.png'],
+    title: 'Calorie Calculator - CalculatorHub',
+    description: 'Determine your daily calorie needs based on your age, height, weight, gender, and activity level.',
+    images: ['https://calculatorhub.com/og-images/calorie-calculator.png'],
   },
 };
 
