@@ -11,6 +11,7 @@
     "dependencies": {
         "@tailwindcss/typography": "^0.5.16",
         "date-fns": "^4.1.0",
+        "framer-motion": "^12.12.2",
         "katex": "^0.16.22",
         "next": "15.3.1",
         "react": "^19.0.0",

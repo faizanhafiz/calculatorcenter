@@ -17,7 +17,8 @@ const CalorieCalculator = () => {
   const [age, setAge] = useState('');
   const [activityLevel, setActivityLevel] = useState('sedentary');
   const [calories, setCalories] = useState<number | null>(null);
-  const [errors, setErrors] = useState<{ [key: string]: boolean }>([]);
+  const [errors, setErrors] = useState<{ [key: string]: boolean }>({});
+
   const [showAd, setShowAd] = useState(false);
 
   const ACTIVITY_LEVELS = {
@@ -75,7 +76,7 @@ const CalorieCalculator = () => {
     const a = parseFloat(age);
     const heightCm = toCm(h);
     const weightKg = toKg(w);
-    const activityMultiplier = ACTIVITY_LEVELS[activityLevel].multiplier;
+    const activityMultiplier = ACTIVITY_LEVELS[activityLevel as keyof typeof ACTIVITY_LEVELS].multiplier;
 
     let bmr;
     if (gender === 'male') {

@@ -28,7 +28,7 @@ const StaticContent = () => {
 
       <h3 className="text-xl font-semibold text-gray-800 mb-2 mt-6">Mifflin-St Jeor Formula:</h3>
       <p className="text-lg text-gray-700"><strong>For Men:</strong></p>
-      <div className="text-black text-center overflow-auto" dangerouslySetInnerHTML={renderLatex(`{BMR} = 10 \* {weight(Kg)} + 6.25 \*{height(cm)} - 5 \* {age(years)} + 5`)}/>
+      <div className="text-black text-center overflow-auto" dangerouslySetInnerHTML={renderLatex(`{BMR} = 10 \* {weight(Kg)} + 6.25 \* {height(cm)} - 5 \* {age(years)} + 5`)}/>
 
       <p className="text-lg text-gray-700 mt-4"><strong>For Women:</strong></p>
       <div className="text-black text-center overflow-auto" dangerouslySetInnerHTML={renderLatex(`{BMR} = 10 \* {weight(Kg)} + 6.25 \* {height(cm)} - 5 \* {age(years)} - 161`)}/>
