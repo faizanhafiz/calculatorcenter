@@ -80,9 +80,9 @@ const CalorieCalculator = () => {
 
     let bmr;
     if (gender === 'male') {
-      bmr = 10 * weightKg + 6.25 * heightCm - 5 * a + 5;
+      bmr = 88.362 + (13.397 * weightKg) + (4.799 * heightCm) - (5.677 * a);
     } else {
-      bmr = 10 * weightKg + 6.25 * heightCm - 5 * a - 161;
+      bmr = 447.593 + (9.247 * weightKg) + (3.098 * heightCm) - (4.330 * a);
     }
 
     const totalCalories = bmr * activityMultiplier;
@@ -220,10 +220,7 @@ const CalorieCalculator = () => {
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Your Daily Calorie Needs</h3>
               <div className="flex items-center justify-center mb-4">
                 <div className={`rounded-full w-32 h-32 flex items-center justify-center ${getCategoryColor(calories)}`}>
-                  <div className="flex flex-col items-center">
                   <span className="text-3xl font-bold text-white">{calories}</span>
-                  <span className="text-sm font-medium text-white opacity-80">kcal/day</span>
-                </div>
                 </div>
               </div>
               <p className="text-gray-600">
