@@ -27,7 +27,7 @@ export default function Home() {
                 <h3 className="text-lg font-semibold text-green-600 mb-2">Fitness & Health</h3>
                 <ul className="space-y-2">
                   <li><Link href="/fitness-health/bmi-calculator" className="text-green-700 hover:underline">BMI Calculator</Link></li>
-                  <li><Link href="/fitness-health/calories" className="text-green-700 hover:underline">Calories Calculator</Link></li>
+                  <li><Link href="/fitness-health/calorie-calculator" className="text-green-700 hover:underline">Calories Calculator</Link></li>
                 </ul>
               </div>
     

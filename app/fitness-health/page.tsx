@@ -70,7 +70,7 @@ export const metadata = {
           <div className="bg-white rounded-xl shadow p-5">
             <h3 className="text-xl font-semibold text-orange-600 mb-4">Nutrition</h3>
             <ul className="space-y-2 text-orange-700">
-              <li><Link href="/fitness-health/calories" className="hover:underline">Calories Calculator</Link></li>
+              <li><Link href="/fitness-health/calorie-calculator" className="hover:underline">Calories Calculator</Link></li>
               <li><Link href="/fitness-health/macros" className="hover:underline">Macronutrient Calculator</Link></li>
               <li><Link href="/fitness-health/tdee" className="hover:underline">TDEE Calculator</Link></li>
             </ul>
