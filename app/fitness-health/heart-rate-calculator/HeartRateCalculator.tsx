@@ -3,17 +3,18 @@
 import React, { useState } from 'react';
 
 export default function HeartRateCalculator() {
-  const [age, setAge] = useState('');
-  const [maxHr, setMaxHr] = useState(null);
-  const [moderateHr, setModerateHr] = useState(null);
-  const [vigorousHr, setVigorousHr] = useState(null);
-  const [error, setError] = useState('');
+  // Explicitly define types for state variables
+  const [age, setAge] = useState<string>('');
+  const [maxHr, setMaxHr] = useState<number | null>(null);
+  const [moderateHr, setModerateHr] = useState<string | null>(null);
+  const [vigorousHr, setVigorousHr] = useState<string | null>(null);
+  const [error, setError] = useState<string>('');
 
   // Define a maximum scale for the progress bars (e.g., typical max HR for a very young person)
   // This helps normalize the bar lengths for visualization.
   const MAX_HR_SCALE = 220; // A common maximum possible heart rate for visualization
 
-  const handleAgeChange = (e) => {
+  const handleAgeChange = (e: React.ChangeEvent<HTMLInputElement>) => { // Added type annotation for 'e'
     const value = e.target.value;
     if (/^\d*$/.test(value)) {
       setAge(value);
@@ -53,7 +54,7 @@ export default function HeartRateCalculator() {
    * @param {number} valueForBar - The numeric value to determine the bar's fill (e.g., max HR or upper bound of a zone).
    * @param {string} barColorClass - Tailwind CSS class for the bar's background color.
    */
-  const renderCircularProgressBar = (label, valueText, valueForBar, barColorClass) => {
+  const renderCircularProgressBar = (label: string, valueText: string, valueForBar: number, barColorClass: string) => {
     const radius = 50; // Radius of the circle
     const circumference = 2 * Math.PI * radius; // Circumference of the circle
 
@@ -125,7 +126,7 @@ export default function HeartRateCalculator() {
           value={age}
           onChange={handleAgeChange}
           placeholder="e.g., 30"
-          className="w-full px-4 py-3 text-gray-800 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500 text-lg transition duration-200"
+          className="w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:ring-purple-500 focus:border-purple-500 text-lg transition duration-200"
         />
         {error && <p className="text-red-600 text-sm mt-2">{error}</p>}
       </div>
@@ -149,14 +150,14 @@ export default function HeartRateCalculator() {
             )}
             {renderCircularProgressBar(
               'Moderate Zone', // Shorter label
-              moderateHr,
-              parseInt(moderateHr.split(' - ')[1]), // Use upper bound for bar length
+              moderateHr!, // Non-null assertion
+              parseInt(moderateHr!.split(' - ')[1]), // Non-null assertion
               'bg-green-500' // Green for Moderate
             )}
             {renderCircularProgressBar(
               'Vigorous Zone', // Shorter label
-              vigorousHr,
-              parseInt(vigorousHr.split(' - ')[1]), // Use upper bound for bar length
+              vigorousHr!, // Non-null assertion
+              parseInt(vigorousHr!.split(' - ')[1]), // Non-null assertion
               'bg-blue-500' // Blue for Vigorous
             )}
           </div>
