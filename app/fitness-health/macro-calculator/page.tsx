@@ -3,7 +3,7 @@ import MacroCalculator from './MacroCalculator';
 import StaticContent from './StaticContent';
 
 export const metadata: Metadata = {
-  title: 'Macronutrient Calculator - Calculate Your Daily Macros | CalculatorCenter',
+  title: 'Macronutrient Calculator - Calculate Your Daily Macros | Zenicalculator',
   description: 'Calculate your daily macronutrient needs based on your weight, height, age, activity level, and fitness goals. Get personalized protein, carbs, and fat recommendations.',
   keywords: [
     'Macro Calculator',
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Macronutrient Calculator - CalculatorHub',
     description: 'Calculate your daily macronutrient needs based on your weight, height, age, activity level, and fitness goals.',
-    url: 'https://calculatorhub.com/fitness-health/macro-calculator',
+    url: 'https://zenicalculator.com/fitness-health/macro-calculator',
     siteName: 'CalculatorHub',
     images: [
       {
-        url: 'https://calculatorhub.com/og-images/macro-calculator.png',
+        url: 'https://zenicalculator.com/og-images/macro-calculator.png',
         width: 1200,
         height: 630,
-        alt: 'Macronutrient Calculator on CalculatorHub',
+        alt: 'Macronutrient Calculator on Zenicalculator',
       },
     ],
     locale: 'en_US',
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Macronutrient Calculator - CalculatorHub',
+    title: 'Macronutrient Calculator - Zenicalculator',
     description: 'Calculate your daily macronutrient needs based on your weight, height, age, activity level, and fitness goals.',
-    images: ['https://calculatorhub.com/og-images/macro-calculator.png'],
+    images: ['https://zenicalculator.com/og-images/macro-calculator.png'],
   },
 };
 

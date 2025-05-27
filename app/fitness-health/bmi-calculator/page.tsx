@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import StaticContent from './StaticContent';
 
 export const metadata: Metadata = {
-  title: 'BMI Calculator - Calculate Your Body Mass Index | CalculatorCenter',
+  title: 'BMI Calculator - Calculate Your Body Mass Index | zenicalculator',
   description:
     'Use our free BMI Calculator to determine your Body Mass Index. Understand your health status based on your weight and height.',
     keywords: [
@@ -12,13 +12,13 @@ export const metadata: Metadata = {
       'Bmi calculator for women'
     ],
   openGraph: {
-    title: 'BMI Calculator - CalculatorCenter',
+    title: 'BMI Calculator - zenicalculator',
     description: 'Easily calculate your BMI and assess your weight category with our accurate tool.',
-    url: 'https://calculatorhub.com/fitness-health/bmi',
-    siteName: 'CalculatorHub',
+    url: 'https://zenicalculator.com/fitness-health/bmi',
+    siteName: 'zenicalculator',
     images: [
       {
-        url: 'https://calculatorhub.com/og-images/bmi.png',
+        url: 'https://zenicalculator.com/og-images/bmi.png',
         width: 1200,
         height: 630,
         alt: 'BMI Calculator on CalculatorHub',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'BMI Calculator - CalculatorHub',
     description: 'Determine your Body Mass Index using height and weight. Accurate and fast.',
-    images: ['https://calculatorhub.com/og-images/bmi.png'],
+    images: ['https://zenicalculator.com/og-images/bmi.png'],
   },
 };
 

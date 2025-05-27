@@ -5,7 +5,7 @@ export default function NotFound() {
     <div className="relative min-h-screen flex flex-col items-center justify-center px-5 py-16 bg-gray-100 text-gray-800 overflow-x-hidden">
       {/* Logo */}
       <header className="absolute top-0 left-0 p-5">
-        <Link href="/" aria-label="CalculatorCenter Home" className="flex items-center space-x-2">
+        <Link href="/" aria-label="zenicalculator Home" className="flex items-center space-x-2">
           <svg
             className="w-8 h-8 text-blue-500"
             fill="none"

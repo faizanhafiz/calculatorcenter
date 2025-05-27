@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import StaticContent from './StaticContent';
 
 export const metadata: Metadata = {
-  title: 'Body Fat Calculator - Calculate Your Body Fat Percentage | CalculatorCenter',
+  title: 'Body Fat Calculator - Calculate Your Body Fat Percentage | Zenicalculator',
   description:
     'Use our free Body Fat Calculator to estimate your body fat percentage using methods like BMI, Navy, and tape. Understand your fitness level now.',
   keywords: [
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'Navy Body Fat Calculator',
   ],
   openGraph: {
-    title: 'Body Fat Calculator - CalculatorCenter',
+    title: 'Body Fat Calculator - Zenicalculator',
     description: 'Quickly calculate your body fat percentage and understand your health better with our precise tool.',
     url: 'https://calculatorhub.com/fitness-health/body-fat',
     siteName: 'CalculatorHub',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         url: 'https://calculatorhub.com/og-images/body-fat.png',
         width: 1200,
         height: 630,
-        alt: 'Body Fat Calculator on CalculatorHub',
+        alt: 'Body Fat Calculator on Zenicalculator',
       },
     ],
     locale: 'en_US',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Body Fat Calculator - CalculatorHub',
+    title: 'Body Fat Calculator - Zenicalculator',
     description: 'Estimate your body fat percentage using our accurate and easy-to-use calculator.',
     images: ['https://calculatorhub.com/og-images/body-fat.png'],
   },

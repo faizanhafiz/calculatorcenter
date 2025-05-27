@@ -4,7 +4,7 @@ import StaticContent from './StaticContent';
 import WaistHipCalculator from './WaistHipCalculator'
 
 export const metadata: Metadata = {
-  title: 'BMI Calculator - Calculate Your Body Mass Index | CalculatorCenter',
+  title: 'BMI Calculator - Calculate Your Body Mass Index | Zenicalculator',
   description:
     'Use our free BMI Calculator to determine your Body Mass Index. Understand your health status based on your weight and height.',
     keywords: [
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       'Bmi calculator for women'
     ],
   openGraph: {
-    title: 'BMI Calculator - CalculatorCenter',
+    title: 'BMI Calculator - Zenicalculator',
     description: 'Easily calculate your BMI and assess your weight category with our accurate tool.',
     url: 'https://calculatorhub.com/fitness-health/bmi',
     siteName: 'CalculatorHub',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'BMI Calculator - CalculatorHub',
     description: 'Determine your Body Mass Index using height and weight. Accurate and fast.',
-    images: ['https://calculatorhub.com/og-images/bmi.png'],
+    images: ['https://Zenicalculator.com/og-images/bmi.png'],
   },
 };
 

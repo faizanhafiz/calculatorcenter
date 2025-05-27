@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import StaticContent from './StaticContent';
  
 export const metadata: Metadata = {
-  title: 'Calorie Calculator - Calculate Your Daily Calorie Needs | CalculatorCenter',
+  title: 'Calorie Calculator - Calculate Your Daily Calorie Needs | Zenicalculator',
   description:
     'Use our free Calorie Calculator to determine your daily calorie needs based on your age, height, weight, gender, and activity level.',
     keywords: [
@@ -12,16 +12,16 @@ export const metadata: Metadata = {
       'Calorie calculator for women'
     ],
   openGraph: {
-    title: 'Calorie Calculator - CalculatorCenter',
+    title: 'Calorie Calculator - Zenicalculator',
     description: 'Easily calculate your daily calorie needs based on your age, height, weight, gender, and activity level.',
-    url: 'https://calculatorhub.com/fitness-health/calorie-calculator',
-    siteName: 'CalculatorHub',
+    url: 'https://zenicalculator.com/fitness-health/calorie-calculator',
+    siteName: 'Zenicalculator',
     images: [
       {
-        url: 'https://calculatorhub.com/og-images/calorie-calculator.png',
+        url: 'https://zenicalculator.com/og-images/calorie-calculator.png',
         width: 1200,
         height: 630,
-        alt: 'Calorie Calculator on CalculatorHub',
+        alt: 'Calorie Calculator on Zenicalculator',
       },
     ],
     locale: 'en_US',
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Calorie Calculator - CalculatorHub',
+    title: 'Calorie Calculator - Zenicalculator',
     description: 'Determine your daily calorie needs based on your age, height, weight, gender, and activity level.',
-    images: ['https://calculatorhub.com/og-images/calorie-calculator.png'],
+    images: ['https://zenicalculator.com/og-images/calorie-calculator.png'],
   },
 };
 
