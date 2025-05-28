@@ -9,12 +9,12 @@ export default function HeartRateStaticContent() {
       <div className="block md:hidden mt-8 mb-8">
             <AdsSection />
           </div>
-      <h2 className="text-3xl font-bold text-purple-800 mb-4">Understanding Your Heart Rate Zones</h2>
+      <h2 className="text-3xl font-bold text-gray-800 mb-4">Understanding Your Heart Rate Zones</h2>
       <p className="text-lg leading-relaxed">
         Knowing your target heart rate zones is crucial for optimizing your workouts and achieving your fitness goals effectively. These zones represent the ideal intensity levels at which your heart should be working during physical activity to maximize cardiovascular benefits.
       </p>
 
-      <h3 className="text-2xl font-semibold text-purple-700 mb-3">What is Target Heart Rate?</h3>
+      <h3 className="text-2xl font-semibold text-gray-700 mb-3">What is Target Heart Rate?</h3>
       <p className="leading-relaxed">
         Your target heart rate (THR) is the range of heartbeats per minute that you should aim for during exercise to gain the most benefits from your aerobic workout. It's based on your maximum heart rate (MHR), which is the highest number of beats your heart can achieve during maximum exertion.
       </p>
@@ -26,11 +26,11 @@ export default function HeartRateStaticContent() {
             <AdsSection />
           </div>
 
-      <h3 className="text-2xl font-semibold text-purple-700 mb-3">Calculating Your Zones (The Basics)</h3>
+      <h3 className="text-2xl font-semibold text-gray-700 mb-3">Calculating Your Zones (The Basics)</h3>
       <p className="leading-relaxed">
         The most common method to estimate your Maximum Heart Rate (MHR) is the simple formula:
       </p>
-      <p className="text-xl font-bold text-center text-purple-800 my-4">
+      <p className="text-xl font-bold text-center text-gray-800 my-4">
         220 - Your Age = Maximum Heart Rate (MHR)
       </p>
       <p className="leading-relaxed">
@@ -45,7 +45,7 @@ export default function HeartRateStaticContent() {
         </li>
       </ul>
 
-      <h3 className="text-2xl font-semibold text-purple-700 mb-3">Benefits of Training in Your Target Zones</h3>
+      <h3 className="text-2xl font-semibold text-gray-700 mb-3">Benefits of Training in Your Target Zones</h3>
       <p className="leading-relaxed">
         Exercising within your target heart rate zones offers a multitude of health benefits, including:
       </p>
@@ -62,7 +62,7 @@ export default function HeartRateStaticContent() {
             <AdsSection />
           </div>
 
-      <h3 className="text-2xl font-semibold text-purple-700 mb-3">How to Monitor Your Heart Rate</h3>
+      <h3 className="text-2xl font-semibold text-gray-700 mb-3">How to Monitor Your Heart Rate</h3>
       <p className="leading-relaxed">
         To ensure you're training in your desired zone, you can monitor your heart rate using several methods:
       </p>
@@ -75,7 +75,7 @@ export default function HeartRateStaticContent() {
         </li>
       </ul>
 
-      <h3 className="text-2xl font-semibold text-purple-700 mb-3">Important Considerations & Abnormal Heartbeat</h3>
+      <h3 className="text-2xl font-semibold text-gray-700 mb-3">Important Considerations & Abnormal Heartbeat</h3>
       <p className="leading-relaxed">
         While heart rate zones are a great guide, remember that they are estimates. Factors like your current fitness level, medications, stress, and even environmental conditions can affect your heart rate.
       </p>

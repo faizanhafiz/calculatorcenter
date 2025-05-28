@@ -113,7 +113,7 @@ export default function HeartRateCalculator() {
 
   return (
     <div className="p-6 rounded-xl mb-10">
-      <h2 className="text-3xl font-bold text-purple-800 text-center mb-6">
+      <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
         Your Personal Heart Rate Calculator
       </h2>
       <div className="mb-6">
