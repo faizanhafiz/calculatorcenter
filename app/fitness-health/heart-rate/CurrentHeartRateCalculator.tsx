@@ -28,11 +28,15 @@ export default function CurrentHeartRateCalculator() {
 
     // Basic interpretation based on resting heart rate ranges (for adults)
     if (hr < 60) {
-      setMessage("Your heart rate is below normal resting range (bradycardia).");
+      setMessage(
+        <>Your heart rate is below normal resting range (<span className="text-red-600 font-bold">bradycardia</span>).</>
+      );
     } else if (hr <= 100) {
       setMessage("Your heart rate is within the normal resting range.");
     } else {
-      setMessage("Your heart rate is above normal resting range (tachycardia).");
+      setMessage(
+        <>Your heart rate is above normal resting range (<span className="text-red-600 font-bold">tachycardia</span>).</>
+      );
     }
   };
 
@@ -50,7 +54,7 @@ export default function CurrentHeartRateCalculator() {
         value={heartRate}
         onChange={handleInputChange}
         placeholder="e.g., 72"
-        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 text-lg mb-4"
+        className="w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 text-lg mb-4"
       />
       {error && <p className="text-red-600 mb-4">{error}</p>}
       <button

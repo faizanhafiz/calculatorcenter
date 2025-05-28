@@ -1,25 +1,26 @@
 import React from 'react';
 import AdsSection from '@/components/TopAd'; // Assuming AdsSection is for mobile ads
 
-export default function HeartRateStaticContent() {
+ export default function HeartRateStaticContent() {
   return (
-    <div className="space-y-6 text-gray-700"> {/* Removed p-6 padding from here */}
+    <div className="space-y-6 text-gray-700">
       {/* Mobile Ad Section 1: Visible on mobile, hidden on medium screens and up */}
       <div className="block md:hidden mt-8 mb-8">
         <AdsSection />
       </div>
 
-      <h2 className="text-3xl font-bold text-gray-800 mb-4">Understanding Your Heart Rate Zones</h2> {/* Changed text-purple-800 to text-gray-800 */}
+      <h2 className="text-3xl font-bold text-gray-800 mb-4">Understanding Your Heart Rate</h2>
       <p className="text-lg leading-relaxed">
-        Knowing your target heart rate zones is crucial for optimizing your workouts and achieving your fitness goals effectively. These zones represent the ideal intensity levels at which your heart should be working during physical activity to maximize cardiovascular benefits.
+        Your heart rate is the number of times your heart beats per minute (BPM). It specifically refers to the number of contractions of the ventricles (the lower chambers of the heart). It is a vital sign that provides insight into your cardiovascular health and fitness level.
       </p>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-3">What is Target Heart Rate?</h3> {/* Changed text-purple-700 to text-gray-800 */}
       <p className="leading-relaxed">
-        Your target heart rate (THR) is the range of heartbeats per minute that you should aim for during exercise to gain the most benefits from your aerobic workout. It's based on your maximum heart rate (MHR), which is the highest number of beats your heart can achieve during maximum exertion.
+        The heart rate can be too fast (tachycardia) or too slow (bradycardia), which are types of Heart Arrhythmias. The pulse rate, often taken at the wrist, is a bulge of an artery from waves of blood that course through the blood vessels each time the heart beats, and it's used to estimate heart rate.
       </p>
+
+      <h3 className="text-2xl font-semibold text-gray-800 mb-3">Normal Resting Heart Rate (RHR)</h3>
       <p className="leading-relaxed">
-        While your maximum heart rate typically decreases with age, your target heart rate zones help you gauge the effectiveness and safety of your exercise intensity.
+        Normal resting heart rate (RHR) is a key indicator of both general and physical health. For most healthy adults, normal values typically range from 60 to 100 beats per minute (bpm). It's common for the RHR value to decrease as cardiovascular fitness increases; for example, athletes often have lower resting heart rates.
       </p>
 
       {/* Mobile Ad Section 2: Visible on mobile, hidden on medium screens and up */}
@@ -27,28 +28,12 @@ export default function HeartRateStaticContent() {
         <AdsSection />
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-3">Calculating Your Zones (The Basics)</h3> {/* Changed text-purple-700 to text-gray-800 */}
-      <p className="leading-relaxed">
-        The most common method to estimate your Maximum Heart Rate (MHR) is the simple formula:
-      </p>
-      <p className="text-xl font-bold text-center text-purple-800 my-4">
-        220 - Your Age = Maximum Heart Rate (MHR)
-      </p>
-      <p className="leading-relaxed">
-        Once you have your MHR, your target heart rate zones are calculated as percentages of this maximum:
-      </p>
-      <ul className="list-disc list-inside space-y-2 ml-4">
-        <li>
-          <strong>Moderate-intensity Zone:</strong> Typically 50% to 70% of your MHR. In this zone, you should be able to talk but not sing. It's excellent for building endurance and is suitable for most healthy adults.
-        </li>
-        <li>
-          <strong>Vigorous-intensity Zone:</strong> Typically 70% to 85% of your MHR. This is a higher intensity level where you'll find it difficult to say more than a few words without pausing for breath. It's great for improving cardiovascular fitness and burning more calories in less time.
-        </li>
-      </ul>
+     
+      
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-3">Benefits of Training in Your Target Zones</h3> {/* Changed text-purple-700 to text-gray-800 */}
+      <h3 className="text-2xl font-semibold text-gray-800 mb-3">Benefits of Training in Your Target Zones</h3>
       <p className="leading-relaxed">
-        Exercising within your target heart rate zones offers a multitude of health benefits, including:
+        Exercising within your target heart rate zones offers significant health benefits, including:
       </p>
       <ul className="list-disc list-inside space-y-2 ml-4">
         <li>Improved cardiovascular health and endurance</li>
@@ -65,7 +50,7 @@ export default function HeartRateStaticContent() {
         <AdsSection />
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-3">How to Monitor Your Heart Rate</h3> {/* Changed text-purple-700 to text-gray-800 */}
+      <h3 className="text-2xl font-semibold text-gray-800 mb-3">How to Monitor Your Heart Rate</h3>
       <p className="leading-relaxed">
         To ensure you're training in your desired zone, you can monitor your heart rate using several methods:
       </p>
@@ -78,9 +63,9 @@ export default function HeartRateStaticContent() {
         </li>
       </ul>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mb-3">Important Considerations & Abnormal Heartbeat</h3> {/* Changed text-purple-700 to text-gray-800 */}
+      <h3 className="text-2xl font-semibold text-gray-800 mb-3">Important Considerations & Abnormal Heartbeat</h3>
       <p className="leading-relaxed">
-        While heart rate zones are a great guide, remember that they are estimates. Factors like your current fitness level, medications, stress, and even environmental conditions can affect your heart rate.
+        While heart rate calculations provide valuable guidance, remember they are estimates. Factors like your current fitness level, medications, stress, and even environmental conditions can affect your heart rate.
       </p>
       <p className="leading-relaxed">
         It's particularly important to pay attention to your body and heart rate during exercise. If you experience an <strong className="text-red-600">abnormal heartbeat</strong>, such as a sudden flutter, skipped beats, or a racing heart that doesn't align with your exertion level, stop exercising immediately. Other warning signs include chest pain, dizziness, extreme shortness of breath, or feeling faint.
