@@ -8,18 +8,20 @@ export const metadata: Metadata = {
   title: 'Heart Rate Calculator - Optimize Your Workouts | Zenicalculator',
   description: 'Calculate your maximum heart rate and target heart rate zones for moderate and vigorous intensity workouts. Improve your fitness and cardiovascular health.',
   keywords: [
+    'abnormal heartbeat',
     'Heart Rate Calculator',
     'Target Heart Rate',
     'Max Heart Rate',
     'Fitness Zones',
     'Cardio Health',
-    'Workout Zones'
+    'Workout Zones',
+    
   ],
   openGraph: {
-    title: 'Heart Rate Calculator - CalculatorHub',
+    title: 'Heart Rate Calculator - Zenicalculator ',
     description: 'Calculate your maximum heart rate and target heart rate zones for moderate and vigorous intensity workouts.',
     url: 'https://zenicalculator.com/fitness-health/heart-rate-calculator', // Update URL
-    siteName: 'CalculatorHub',
+    siteName: 'zenicalculator',
     images: [
       {
         url: 'https://zenicalculator.com/og-images/heart-rate-calculator.png', // Placeholder image URL
