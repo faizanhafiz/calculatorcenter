@@ -82,7 +82,7 @@ export const metadata = {
             <ul className="space-y-2 text-purple-700">
               <li><Link href="/fitness-health/bmr-calculator" className="hover:underline">BMR Calculator</Link></li>
               <li><Link href="/fitness-health/heart-rate-calculator" className="hover:underline">Heart Rate Calculator</Link></li>
-              <li><Link href="/fitness-health/target-heart" className="hover:underline">Target Heart Rate Calculator</Link></li>
+              <li><Link href="/fitness-health/target-heart-rates" className="hover:underline">Target Heart Rate Calculator</Link></li>
             </ul>
           </div>
         </section>
