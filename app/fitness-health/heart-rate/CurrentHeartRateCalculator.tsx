@@ -6,7 +6,7 @@ export default function CurrentHeartRateCalculator() {
   const [heartRate, setHeartRate] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [message, setMessage] = useState<React.ReactNode>(null);
-
+  const [showDefinitions, setShowDefinitions] = useState<boolean>(false); // State to control visibility of definitions
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -14,6 +14,7 @@ export default function CurrentHeartRateCalculator() {
       setHeartRate(value);
       setError("");
       setMessage("");
+      setShowDefinitions(false); // Hide definitions when input changes
     }
   };
 
@@ -22,10 +23,12 @@ export default function CurrentHeartRateCalculator() {
     if (isNaN(hr) || hr <= 0 || hr > 250) {
       setError("Please enter a valid heart rate between 1 and 250.");
       setMessage("");
+      setShowDefinitions(false); // Hide definitions on error
       return;
     }
 
     setError("");
+    setShowDefinitions(true); // Show definitions when a valid result is processed
 
     // Basic interpretation based on resting heart rate ranges (for adults)
     if (hr < 60) {
@@ -33,7 +36,7 @@ export default function CurrentHeartRateCalculator() {
         <>Your heart rate is below normal resting range (<span className="text-red-600 font-bold">bradycardia</span>).</>
       );
     } else if (hr <= 100) {
-      setMessage("Your heart rate is within the normal resting range.");
+      setMessage(<>Your heart rate is within the (<span className="text-green-600 font-bold">normal</span>) resting range.</>);
     } else {
       setMessage(
         <>Your heart rate is above normal resting range (<span className="text-red-600 font-bold">tachycardia</span>).</>
@@ -67,6 +70,21 @@ export default function CurrentHeartRateCalculator() {
 
       {message && (
         <p className="mt-6 text-center text-gray-800 font-semibold text-lg">{message}</p>
+      )}
+
+      {/* Added definitions section */}
+      {showDefinitions && (
+        <div className="mt-6 pt-4 border-t border-gray-200 text-sm text-gray-700">
+          <h3 className="text-md font-semibold text-gray-800 mb-2 text-center">Heart Rate Information:</h3>
+          <ul className="list-disc list-inside pl-4 space-y-1">
+            <li>Normal Resting Heart Rate: 60-100 beats per minute (bpm)</li>
+            <li>Bradycardia: Below 60 bpm</li>
+            <li>Tachycardia: Above 100 bpm</li>
+          </ul>
+          <p className="text-xs text-gray-500 mt-3 text-center">
+            This is general information for adults and not medical advice. Consult a doctor for any health concerns.
+          </p>
+        </div>
       )}
     </div>
   );
