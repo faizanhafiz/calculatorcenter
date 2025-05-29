@@ -5,7 +5,8 @@ import React, { useState } from "react";
 export default function CurrentHeartRateCalculator() {
   const [heartRate, setHeartRate] = useState<string>("");
   const [error, setError] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
+  const [message, setMessage] = useState<React.ReactNode>(null);
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;

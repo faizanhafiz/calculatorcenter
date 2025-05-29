@@ -9,9 +9,9 @@ export default function HeartRateStaticContent() {
         <AdsSection />
       </div>
 
-      <h2 className="text-3xl font-bold text-gray-800 mb-4">Understanding Your Heart Rate Zones</h2> {/* Changed text-purple-800 to text-gray-800 */}
-      <p className="text-lg leading-relaxed">
-        Knowing your target heart rate zones is crucial for optimizing your workouts and achieving your fitness goals effectively. These zones represent the ideal intensity levels at which your heart should be working during physical activity to maximize cardiovascular benefits.
+      <h2 className="text-2xl font-semibold text-gray-800 mb-3">Understanding Your Heart Rate Zones</h2> {/* Changed text-purple-800 to text-gray-800 */}
+      <p className=" leading-relaxed">
+        Understanding your target heart rate zones is important in maximizing your workouts and getting the desired fitness outcomes effectively. These are the optimal intensity levels at which your heart must be operating when exercising in order to achieve maximum cardiovascular gains
       </p>
 
       <h3 className="text-2xl font-semibold text-gray-800 mb-3">What is Target Heart Rate?</h3> {/* Changed text-purple-700 to text-gray-800 */}
