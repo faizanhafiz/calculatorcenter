@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import { useState ,useRef} from 'react';
 import { FaMale, FaFemale } from 'react-icons/fa';
@@ -123,15 +123,12 @@ const MacroCalculator: React.FC<MacroCalculatorProps> = ({ defaultGoal = 'weight
 
     setMacros({ protein, carbs, fat });
 
-    // Scroll to results section
-    if (resultsRef.current) {
-      resultsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    // Scroll to results section on mobile after state updates
     setTimeout(() => {
       if (window.innerWidth <= 768 && resultsRef.current) {
         resultsRef.current.scrollIntoView({ behavior: 'smooth' });
       }
-    }, 0);
+    }, 100);
   };
 
   return (
@@ -182,7 +179,6 @@ const MacroCalculator: React.FC<MacroCalculatorProps> = ({ defaultGoal = 'weight
               <input
                 type="number"
                 value={age}
-                placeholder='enter age'
                 onChange={(e) => setAge(e.target.value)}
                 className="w-full px-3 text-gray-700 py-2 border border-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                 min="13"
@@ -198,7 +194,6 @@ const MacroCalculator: React.FC<MacroCalculatorProps> = ({ defaultGoal = 'weight
               <label className="block text-sm font-medium text-gray-700">Weight</label>
               <div className="flex items-center space-x-2">
                 <input
-                
                   type="number"
                   value={weight}
                   onChange={(e) => setWeight(e.target.value)}
@@ -285,9 +280,9 @@ const MacroCalculator: React.FC<MacroCalculatorProps> = ({ defaultGoal = 'weight
             {/* Calculate Button */}
             <button
               onClick={calculateMacros}
-              className="  bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+              className="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
             >
-              Calculate
+              Calculate Macros
             </button>
           </div>
         </div>
@@ -296,7 +291,7 @@ const MacroCalculator: React.FC<MacroCalculatorProps> = ({ defaultGoal = 'weight
         <div>
           {calories !== null && (
             <div ref={resultsRef} className="mt-8 p-6 bg-white rounded-xl shadow">
-              <h2 className="text-2xl font-semibold text-blue-700 mb-4 pt-10">Your Macronutrient Needs</h2>
+              <h2 className="text-2xl font-semibold text-blue-700 mb-4">Your Macronutrient Needs</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="bg-blue-100 rounded-full p-6 text-center">
                   <div className="text-blue-800 font-semibold text-3xl">{calories}</div>
