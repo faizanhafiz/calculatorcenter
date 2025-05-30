@@ -198,6 +198,7 @@ const MacroCalculator: React.FC<MacroCalculatorProps> = ({ defaultGoal = 'weight
               <label className="block text-sm font-medium text-gray-700">Weight</label>
               <div className="flex items-center space-x-2">
                 <input
+                
                   type="number"
                   value={weight}
                   onChange={(e) => setWeight(e.target.value)}
