@@ -46,7 +46,7 @@ export default function Page() {
       {/* Page Heading */}
       <section className="text-center">
         <h1 className="text-3xl md:text-4xl font-bold text-green-700 mb-3">
-          BMI Calculator
+          BMI Calculator Testing
         </h1>
         <p className="text-gray-700 text-base md:text-lg text-center md:text-left">
   Use this BMI calculator to quickly determine your Body Mass Index. Find out if you're underweight, normal weight, overweight, or obese based on your height and weight.
