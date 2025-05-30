@@ -182,6 +182,7 @@ const MacroCalculator: React.FC<MacroCalculatorProps> = ({ defaultGoal = 'weight
               <input
                 type="number"
                 value={age}
+                placeholder='enter age'
                 onChange={(e) => setAge(e.target.value)}
                 className="w-full px-3 text-gray-700 py-2 border border-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                 min="13"
